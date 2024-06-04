@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center center;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-moderate-violet: hsl(263, 55%, 52%);
+  --color-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-dark-blackish-blue: hsl(219, 29%, 14%);
+  --color-light-gray: hsl(0, 0%, 81%);
+  --color-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--color-light-grayish-blue);
+}
+
+main {
+  width: 25rem;
+  display: grid;
+  gap: 2rem;
+
+  margin: 2rem 0 2rem 0;
+}
+
+main .card {
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+
+  display: grid;
+  gap: 1rem;
+
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
+.card img {
+  border-radius: 100%;
+  width: 2rem;
+  outline: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+
+.card .image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card .image .name {
+  display: block;
+}
+
+.card p:first-of-type {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.card,
+.dark-mode h1 {
+  color: white;
+}
+
+.card,
+.dark-mode h2 {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.dark-mode p:first-of-type {
+  color: white;
+}
+
+.dark-mode p:last-of-type {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.daniel {
+  background-color: var(--color-moderate-violet);
+
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.jonathan {
+  background-color: var(--color-dark-grayish-blue);
+}
+
+.jeanette {
+  background-color: white;
+}
+
+.patrick {
+  background-color: var(--color-dark-blackish-blue);
+}
+
+.kira {
+  background-color: white;
+}
+
+.card,
+.light-mode h1 {
+  color: var(--color-dark-grayish-blue);
+}
+
+.card,
+.light-mode h2 {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+
+.card,
+.light-mode p:first-of-type {
+  color: var(--color-dark-grayish-blue);
+}
+
+.card,
+.light-mode p:last-of-type {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+@media screen and (min-width: 1090px) {
+  main {
+    width: 80rem;
+  }
+
+  .daniel {
+    grid-area: daniel;
+  }
+
+  .jonathan {
+    grid-area: jonathan;
+  }
+
+  .patrick {
+    grid-area: patrick;
+  }
+
+  .jeanette {
+    grid-area: jeanette;
+  }
+
+  .kira {
+    grid-area: kira;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas:
+      "daniel daniel daniel jonathan kira"
+      "jeanette patrick patrick patrick kira";
+  }
+}
